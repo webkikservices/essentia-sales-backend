@@ -77,20 +77,10 @@ app.post('/api/send-email', async (req, res) => {
                         <p style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#8C7355;margin:4px 0 0;">Design Fee Proposal</p>
                     </div>
                     <p style="font-size:15px;line-height:1.8;">Dear <strong>${clientName}</strong>,</p>
-                    <p style="font-size:14px;line-height:1.8;color:#4A4840;">
-                        Please find attached your Design Fee Proposal from Essentia Client Advisory.
+                    <p style="font-size:14px;line-height:1.9;color:#4A4840;">
+                        Thank you for the opportunity to work on your ${location} project. We are pleased to share our Design Fee Proposal for your reference. Please find the detailed proposal attached to this email — it outlines the scope of our services and the design process we have envisioned for your space.${advisor ? ` Should you have any questions, your advisor <strong>${advisor}</strong> will be happy to assist.` : ' Please feel free to reach out should you have any questions.'}
                     </p>
-                    <table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:13px;">
-                        <tr style="border-bottom:1px solid #DDD8D2;"><td style="padding:8px 0;color:#6A6460;">Project Location</td><td style="padding:8px 0;font-weight:500;">${location}</td></tr>
-                        <tr style="border-bottom:1px solid #DDD8D2;"><td style="padding:8px 0;color:#6A6460;">Area</td><td style="padding:8px 0;font-weight:500;">${area}</td></tr>
-                        <tr style="border-bottom:1px solid #DDD8D2;"><td style="padding:8px 0;color:#6A6460;">Net Design Fee</td><td style="padding:8px 0;font-size:16px;color:#8C7355;font-weight:600;">${netFee}</td></tr>
-                        <tr style="border-bottom:1px solid #DDD8D2;"><td style="padding:8px 0;color:#6A6460;">Date</td><td style="padding:8px 0;">${date}</td></tr>
-                        ${advisor ? `<tr><td style="padding:8px 0;color:#6A6460;">Your Advisor</td><td style="padding:8px 0;font-weight:500;">${advisor}</td></tr>` : ''}
-                    </table>
-                    <p style="font-size:13px;line-height:1.8;color:#4A4840;">
-                        The detailed proposal PDF is attached to this email. Please review it at your convenience.
-                    </p>
-                    <p style="font-size:13px;margin-top:24px;">Warm regards,<br/><strong>The Essentia Team</strong></p>
+                    <p style="font-size:13px;margin-top:28px;">Warm regards,<br/><strong>The Essentia Team</strong></p>
                     <div style="border-top:1px solid #DDD8D2;margin-top:24px;padding-top:12px;font-size:10px;color:#9A9490;letter-spacing:0.1em;text-transform:uppercase;">
                         Essentia Client Advisory · Confidential
                     </div>
