@@ -67,18 +67,18 @@ app.post('/api/send-email', async (req, res) => {
         });
 
         const mailOptions = {
-            from: `"Essentia Sales Department" <${process.env.GMAIL_USER?.trim()}>`,
+            from: `"Essentia Client Advisory" <${process.env.GMAIL_USER?.trim()}>`,
             to,
             subject: `Essentia Fee Proposal — ${clientName} — ${location}`,
             html: `
                 <div style="font-family:Georgia,serif;max-width:560px;margin:0 auto;color:#2A2320;">
                     <div style="border-bottom:2px solid #8C7355;padding-bottom:16px;margin-bottom:24px;">
-                        <h2 style="font-weight:300;font-size:22px;margin:0;color:#1C1714;">Essentia Sales Department</h2>
+                        <h2 style="font-weight:300;font-size:22px;margin:0;color:#1C1714;">Essentia Client Advisory</h2>
                         <p style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#8C7355;margin:4px 0 0;">Design Fee Proposal</p>
                     </div>
                     <p style="font-size:15px;line-height:1.8;">Dear <strong>${clientName}</strong>,</p>
                     <p style="font-size:14px;line-height:1.8;color:#4A4840;">
-                        Please find attached your Design Fee Proposal from Essentia Sales Department.
+                        Please find attached your Design Fee Proposal from Essentia Client Advisory.
                     </p>
                     <table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:13px;">
                         <tr style="border-bottom:1px solid #DDD8D2;"><td style="padding:8px 0;color:#6A6460;">Project Location</td><td style="padding:8px 0;font-weight:500;">${location}</td></tr>
@@ -92,7 +92,7 @@ app.post('/api/send-email', async (req, res) => {
                     </p>
                     <p style="font-size:13px;margin-top:24px;">Warm regards,<br/><strong>The Essentia Team</strong></p>
                     <div style="border-top:1px solid #DDD8D2;margin-top:24px;padding-top:12px;font-size:10px;color:#9A9490;letter-spacing:0.1em;text-transform:uppercase;">
-                        Essentia Sales Department · Confidential
+                        Essentia Client Advisory · Confidential
                     </div>
                 </div>
             `,
